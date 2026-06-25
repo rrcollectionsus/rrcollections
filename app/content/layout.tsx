@@ -1,4 +1,4 @@
-﻿import type { ReactNode } from "react";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { isContent } from "@/lib/content-auth";
 import { logoutContent } from "./actions";

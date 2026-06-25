@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { SITE, CATEGORIES, waLink } from "@/lib/site";
 import { WhatsAppIcon, InstagramIcon, FacebookIcon, YouTubeIcon } from "./icons";
 import NewsletterForm from "./NewsletterForm";

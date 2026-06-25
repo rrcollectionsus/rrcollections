@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { list } from "@vercel/blob";
 import { requireContent } from "@/lib/content-auth";
 import { createClient } from "@/lib/supabase/server";

@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { requireContent } from "@/lib/content-auth";
 import { createProduct } from "../../actions";
 import ProductForm from "@/components/ProductForm";

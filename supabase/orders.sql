@@ -1,4 +1,4 @@
-﻿-- Orders for rrcollections online checkout (run in Supabase SQL Editor).
+-- Orders for rrcollections online checkout (run in Supabase SQL Editor).
 create table if not exists public.orders (
   id                    uuid primary key default gen_random_uuid(),
   stripe_payment_intent text unique,

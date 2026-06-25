@@ -1,4 +1,4 @@
-﻿import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { CATEGORIES, categoryName } from "@/lib/site";
 import { getProductsByCategory } from "@/lib/db";

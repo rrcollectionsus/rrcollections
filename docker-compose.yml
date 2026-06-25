@@ -1,4 +1,4 @@
-﻿# Self-host the RRcollections app. Supply the same env vars you set on Vercel.
+# Self-host the RRcollections app. Supply the same env vars you set on Vercel.
 services:
   web:
     build: .

@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { searchProductsDb } from "@/lib/db";
 import ProductGrid from "@/components/ProductGrid";
 

@@ -1,4 +1,4 @@
-﻿-- "Generate Product Photos" â€” AI image generation feature
+-- "Generate Product Photos" â€” AI image generation feature
 -- Run this in the Supabase SQL Editor (project rrcollections). Safe to re-run.
 
 create extension if not exists pgcrypto;

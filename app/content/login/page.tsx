@@ -1,4 +1,4 @@
-﻿import { redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import { isContent, setContentCookie } from "@/lib/content-auth";
 
 export const dynamic = "force-dynamic";

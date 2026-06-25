@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { SITE, waLink } from "@/lib/site";
 import { SearchIcon, HeartIcon, UserIcon, WhatsAppIcon, SparkleIcon } from "./icons";
 import Logo from "./Logo";

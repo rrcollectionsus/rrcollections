@@ -1,4 +1,4 @@
-﻿# Optional self-host image. RRcollections primarily deploys on Vercel; this Dockerfile
+# Optional self-host image. RRcollections primarily deploys on Vercel; this Dockerfile
 # lets you run the same app (incl. the AI photo generator) on any container host.
 FROM node:20-slim AS base
 WORKDIR /app

@@ -1,4 +1,4 @@
-﻿-- ============================================================
+-- ============================================================
 -- RRcollections â€” database schema  (run this in Supabase SQL Editor)
 -- Project: rrcollections (separate from TallyMigo)
 -- Covers: products, enquiries/orders, newsletter, customer profiles, wishlists

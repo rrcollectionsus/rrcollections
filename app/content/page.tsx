@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { requireContent } from "@/lib/content-auth";
 import { createClient } from "@/lib/supabase/server";
 import { usd } from "@/lib/site";

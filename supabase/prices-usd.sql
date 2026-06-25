@@ -1,4 +1,4 @@
-﻿-- Convert rrcollections product prices to USD (run in Supabase SQL Editor).
+-- Convert rrcollections product prices to USD (run in Supabase SQL Editor).
 -- RRcollections is US-based, so prices are in dollars.
 update public.products set price = 59,  mrp = 89   where slug = 'banarasi-silk-saree';
 update public.products set price = 119, mrp = 159  where slug = 'kanjivaram-pure-silk-saree';

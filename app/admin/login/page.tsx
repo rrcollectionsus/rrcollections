@@ -1,4 +1,4 @@
-﻿import { redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import { isAdmin, setAdminCookie } from "@/lib/admin-auth";
 
 export const dynamic = "force-dynamic";
