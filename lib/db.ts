@@ -55,14 +55,19 @@ function mapRow(r: Row): Product {
 }
 
 export async function getAllProducts(): Promise<Product[]> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("products")
-    .select("*")
-    .eq("in_stock", true)
-    .order("sort_order", { ascending: true });
-  if (error || !data) return [];
-  return (data as Row[]).map(mapRow);
+  try {
+    const supabase = await createClient();
+    const { data, error } = await supabase
+      .from("products")
+      .select("*")
+      .eq("in_stock", true)
+      .order("sort_order", { ascending: true });
+    if (error || !data) return [];
+    return (data as Row[]).map(mapRow);
+  } catch {
+    // Supabase not configured / unreachable — show an empty catalog instead of a 500.
+    return [];
+  }
 }
 
 export async function getProductsByCategory(slug: string): Promise<Product[]> {
@@ -74,9 +79,13 @@ export async function getProductsByCategory(slug: string): Promise<Product[]> {
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
-  const supabase = await createClient();
-  const { data } = await supabase.from("products").select("*").eq("slug", slug).maybeSingle();
-  return data ? mapRow(data as Row) : null;
+  try {
+    const supabase = await createClient();
+    const { data } = await supabase.from("products").select("*").eq("slug", slug).maybeSingle();
+    return data ? mapRow(data as Row) : null;
+  } catch {
+    return null;
+  }
 }
 
 export async function searchProductsDb(query: string): Promise<Product[]> {
