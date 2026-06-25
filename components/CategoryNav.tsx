@@ -20,10 +20,6 @@ const SALWAR_COLS: MegaCol[] = [
   { title: "Fabric", items: ["Chanderi Suits", "Georgette Suits", "Cotton Suits", "Net Suits", "Art Silk Suits"], all: "All Fabrics" },
 ];
 
-const JEWELLERY_COLS: MegaCol[] = [
-  { items: ["Necklace Sets", "Necklaces", "Bangles & Bracelets", "Earrings", "Anklets", "Pendants", "Silk Thread"], all: "All Jewellery" },
-];
-
 type Item =
   | { href: string; label: string; accent?: boolean }
   | { mega: { label: string; href: string; cols: MegaCol[]; align?: "left" | "right" } };
@@ -35,9 +31,8 @@ const NAV: Item[] = [
   { href: "/category/men", label: "Men" },
   { mega: { label: "Sarees", href: "/category/sarees", cols: SAREE_COLS } },
   { mega: { label: "Lehengas", href: "/category/lehengas", cols: LEHENGA_COLS } },
-  { mega: { label: "Suits", href: "/category/kurtas", cols: SALWAR_COLS } },
-  { href: "/category/kids", label: "Kids" },
-  { mega: { label: "Jewellery", href: "/category/jewellery", cols: JEWELLERY_COLS, align: "right" } },
+  { mega: { label: "Suits", href: "/category/kurtas", cols: SALWAR_COLS, align: "right" } },
+  // "Kids" and "Jewellery" temporarily disabled on RRcollections (2026-06-25).
 ];
 
 // Myntra-style top-level nav item: bold uppercase with a gold underline on hover.

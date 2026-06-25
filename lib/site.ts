@@ -39,12 +39,14 @@ export const CATEGORIES: Category[] = [
     blurb: "Anarkali, straight & A-line suits",
     image: "https://images.pexels.com/photos/17154861/pexels-photo-17154861.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
-  {
-    slug: "jewellery",
-    name: "Jewellery & Accessories",
-    blurb: "Jewellery, bags & dupattas",
-    image: "https://images.pexels.com/photos/33154729/pexels-photo-33154729.jpeg?auto=compress&cs=tinysrgb&w=900",
-  },
+  // NOTE: "jewellery" temporarily disabled on RRcollections (2026-06-25). Re-add to
+  // restore it in the nav, homepage tiles, footer and content-manager dropdown.
+  // {
+  //   slug: "jewellery",
+  //   name: "Jewellery & Accessories",
+  //   blurb: "Jewellery, bags & dupattas",
+  //   image: "https://images.pexels.com/photos/33154729/pexels-photo-33154729.jpeg?auto=compress&cs=tinysrgb&w=900",
+  // },
 ];
 
 // Subcategories per category — shown as a dependent dropdown when adding a
