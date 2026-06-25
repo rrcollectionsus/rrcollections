@@ -29,33 +29,62 @@ type Item =
   | { mega: { label: string; href: string; cols: MegaCol[]; align?: "left" | "right" } };
 
 const NAV: Item[] = [
-  { href: "/category/sale", label: "Sale & Clearance", accent: true },
-  { href: "/category/new", label: "New & Trending" },
+  { href: "/category/sale", label: "Sale", accent: true },
+  { href: "/category/new", label: "New" },
   { href: "/category/women", label: "Women" },
   { href: "/category/men", label: "Men" },
   { mega: { label: "Sarees", href: "/category/sarees", cols: SAREE_COLS } },
   { mega: { label: "Lehengas", href: "/category/lehengas", cols: LEHENGA_COLS } },
-  { mega: { label: "Salwar Kameez", href: "/category/kurtas", cols: SALWAR_COLS } },
+  { mega: { label: "Suits", href: "/category/kurtas", cols: SALWAR_COLS } },
   { href: "/category/kids", label: "Kids" },
-  { mega: { label: "Jewellery & Accessories", href: "/category/jewellery", cols: JEWELLERY_COLS, align: "right" } },
+  { mega: { label: "Jewellery", href: "/category/jewellery", cols: JEWELLERY_COLS, align: "right" } },
 ];
 
+// Myntra-style top-level nav item: bold uppercase with a gold underline on hover.
+const itemBase =
+  "flex h-full items-center whitespace-nowrap border-b-[3px] border-transparent text-[13px] font-bold uppercase tracking-wide text-ink transition-colors hover:border-gold hover:text-gold-dark";
+const accentBase =
+  "flex h-full items-center whitespace-nowrap border-b-[3px] border-transparent text-[13px] font-bold uppercase tracking-wide text-sale transition-colors hover:border-sale";
+
+function itemHref(i: Item): string {
+  return "mega" in i ? i.mega.href : i.href;
+}
+
+/** Desktop primary navigation — rendered inline inside the header (Myntra layout). */
+export function MainNav({ className = "" }: { className?: string }) {
+  return (
+    <ul className={className}>
+      {NAV.map((i, idx) => (
+        <li key={idx} className="flex">
+          {"mega" in i ? (
+            <MegaMenu label={i.mega.label} href={i.mega.href} cols={i.mega.cols} align={i.mega.align} triggerClassName={itemBase} />
+          ) : (
+            <Link href={i.href} className={i.accent ? accentBase : itemBase}>
+              {i.label}
+            </Link>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/** Mobile scrollable category bar (shown only below lg, where MainNav is hidden). */
 export default function CategoryNav() {
   return (
-    <nav className="sticky top-0 z-30 border-b border-neutral-200 bg-white">
+    <nav className="border-b border-neutral-200 bg-white lg:hidden">
       <div className="mx-auto max-w-7xl px-4">
-        <ul className="no-scrollbar flex items-center gap-6 overflow-x-auto py-3 text-sm font-bold text-ink md:overflow-visible">
-          {NAV.map((i, idx) => (
-            <li key={idx} className="whitespace-nowrap">
-              {"mega" in i ? (
-                <MegaMenu label={i.mega.label} href={i.mega.href} cols={i.mega.cols} align={i.mega.align} />
-              ) : (
-                <Link href={i.href} className={i.accent ? "text-[#d6006c] hover:opacity-80" : "hover:text-brand"}>
-                  {i.label}
+        <ul className="no-scrollbar flex items-center gap-5 overflow-x-auto py-2.5 text-[13px] font-bold uppercase tracking-wide">
+          {NAV.map((i, idx) => {
+            const accent = !("mega" in i) && i.accent;
+            return (
+              <li key={idx} className="whitespace-nowrap">
+                <Link href={itemHref(i)} className={accent ? "text-sale" : "text-ink hover:text-gold-dark"}>
+                  {"mega" in i ? i.mega.label : i.label}
                 </Link>
-              )}
-            </li>
-          ))}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>

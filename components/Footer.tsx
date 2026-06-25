@@ -59,24 +59,50 @@ export default function Footer() {
                 <WhatsAppIcon className="h-4 w-4" /> WhatsApp
               </a>
             </li>
-            <li>
-              <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white">
-                <InstagramIcon className="h-4 w-4" /> Instagram
-              </a>
-            </li>
-            <li>
-              <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white">
-                <FacebookIcon className="h-4 w-4" /> Facebook
-              </a>
-            </li>
-            <li>
-              <a href={SITE.youtube} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white">
-                <YouTubeIcon className="h-4 w-4" /> YouTube
-              </a>
-            </li>
+            {SITE.instagram && (
+              <li>
+                <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white">
+                  <InstagramIcon className="h-4 w-4" /> Instagram
+                </a>
+              </li>
+            )}
+            {SITE.facebook && (
+              <li>
+                <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white">
+                  <FacebookIcon className="h-4 w-4" /> Facebook
+                </a>
+              </li>
+            )}
+            {SITE.youtube && (
+              <li>
+                <a href={SITE.youtube} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white">
+                  <YouTubeIcon className="h-4 w-4" /> YouTube
+                </a>
+              </li>
+            )}
             <li><a href={`mailto:${SITE.email}`} className="hover:text-white">{SITE.email}</a></li>
-            <li className="text-neutral-400">{SITE.city}</li>
+            <li><a href={`tel:${SITE.whatsapp}`} className="hover:text-white">{SITE.phoneDisplay}</a></li>
+            <li className="text-neutral-400">{SITE.address ?? SITE.city}</li>
           </ul>
+        </div>
+      </div>
+
+      {/* Popular searches (Myntra-style dense link band) */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 py-6">
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-white">Popular searches</h4>
+          <p className="text-xs leading-6 text-neutral-500">
+            {[
+              "Banarasi Sarees", "Kanjivaram Silk", "Bridal Lehengas", "Party Wear Lehengas",
+              "Anarkali Suits", "Salwar Kameez", "Cotton Sarees", "Organza Sarees",
+              "Necklace Sets", "Kids Lehenga", "Designer Sarees", "Festive Wear",
+            ].map((t, i, a) => (
+              <span key={t}>
+                <Link href={`/search?q=${encodeURIComponent(t)}`} className="hover:text-white">{t}</Link>
+                {i < a.length - 1 && <span className="px-1.5 text-neutral-700">|</span>}
+              </span>
+            ))}
+          </p>
         </div>
       </div>
 

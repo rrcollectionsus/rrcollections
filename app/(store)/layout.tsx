@@ -11,7 +11,7 @@ export default function StoreLayout({ children }: { children: ReactNode }) {
       <PromoBar />
       <Header />
       <CategoryNav />
-      <main>{children}</main>
+      <main className="min-h-[40vh]">{children}</main>
       <Footer />
     </CartProvider>
   );

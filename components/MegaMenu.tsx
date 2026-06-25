@@ -10,16 +10,18 @@ export default function MegaMenu({
   href,
   cols,
   align = "left",
+  triggerClassName = "hover:text-brand",
 }: {
   label: string;
   href: string;
   cols: MegaCol[];
   align?: "left" | "right";
+  triggerClassName?: string;
 }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <Link href={href} className="hover:text-brand">
+    <div className="relative flex h-full" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+      <Link href={href} className={triggerClassName}>
         {label}
       </Link>
       {open && (
@@ -33,14 +35,14 @@ export default function MegaMenu({
               <ul className={`space-y-2 ${col.title ? "mt-3" : ""}`}>
                 {col.items.map((it) => (
                   <li key={it}>
-                    <Link href={href} className="text-sm font-normal text-neutral-600 hover:text-brand">
+                    <Link href={href} className="text-sm font-normal text-neutral-600 hover:text-gold-dark">
                       {it}
                     </Link>
                   </li>
                 ))}
                 {col.all && (
                   <li>
-                    <Link href={href} className="text-sm font-medium text-brand hover:underline">
+                    <Link href={href} className="text-sm font-medium text-gold-dark hover:underline">
                       {col.all}…
                     </Link>
                   </li>
