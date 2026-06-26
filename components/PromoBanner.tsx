@@ -6,7 +6,7 @@ export default function PromoBanner() {
       <div className="relative overflow-hidden rounded-2xl">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.pexels.com/photos/17001511/pexels-photo-17001511.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          src="https://images.pexels.com/photos/5595710/pexels-photo-5595710.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt="The Bridal Edit"
           className="h-[42vw] max-h-[360px] min-h-[220px] w-full object-cover"
         />

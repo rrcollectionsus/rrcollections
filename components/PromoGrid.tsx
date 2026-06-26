@@ -5,7 +5,7 @@ const px = (id: number, w = 1200) =>
 
 const BANNERS = [
   {
-    img: px(28405815),
+    img: px(28405816),
     eyebrow: "The Wedding Store",
     title: "Bridal Lehengas",
     sub: "Hand-embroidered, made for the big day.",
@@ -13,7 +13,7 @@ const BANNERS = [
     cta: "Shop Lehengas",
   },
   {
-    img: px(27719401),
+    img: px(28316406),
     eyebrow: "New Drapes",
     title: "Designer Sarees",
     sub: "Silk, organza & handloom classics.",
