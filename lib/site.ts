@@ -25,19 +25,19 @@ export const CATEGORIES: Category[] = [
     slug: "sarees",
     name: "Sarees",
     blurb: "Silk, cotton & designer drapes",
-    image: "https://images.pexels.com/photos/7920055/pexels-photo-7920055.jpeg?auto=compress&cs=tinysrgb&w=900",
+    image: "https://images.pexels.com/photos/17113983/pexels-photo-17113983.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
   {
     slug: "lehengas",
     name: "Lehengas",
     blurb: "Festive & celebration couture",
-    image: "https://images.pexels.com/photos/12791932/pexels-photo-12791932.jpeg?auto=compress&cs=tinysrgb&w=900",
+    image: "https://images.pexels.com/photos/35637857/pexels-photo-35637857.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
   {
     slug: "kurtas",
     name: "Salwar Kameez",
     blurb: "Anarkali, straight & A-line suits",
-    image: "https://images.pexels.com/photos/17154861/pexels-photo-17154861.jpeg?auto=compress&cs=tinysrgb&w=900",
+    image: "https://images.pexels.com/photos/33824984/pexels-photo-33824984.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
   // NOTE: "jewellery" temporarily disabled on RRcollections (2026-06-25). Re-add to
   // restore it in the nav, homepage tiles, footer and content-manager dropdown.

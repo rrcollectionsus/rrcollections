@@ -28,7 +28,6 @@ const NAV: Item[] = [
   { href: "/category/sale", label: "Sale", accent: true },
   { href: "/category/new", label: "New" },
   { href: "/category/women", label: "Women" },
-  { href: "/category/men", label: "Men" },
   { mega: { label: "Sarees", href: "/category/sarees", cols: SAREE_COLS } },
   { mega: { label: "Lehengas", href: "/category/lehengas", cols: LEHENGA_COLS } },
   { mega: { label: "Suits", href: "/category/kurtas", cols: SALWAR_COLS, align: "right" } },

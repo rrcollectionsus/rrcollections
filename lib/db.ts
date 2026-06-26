@@ -11,12 +11,18 @@ type Row = {
 // Temporary themed placeholders: any product image that is still a generic
 // placeholder (or empty) is swapped for an India-fashion-boutique image.
 // As soon as a real photo is uploaded in the content manager, that image wins.
+// Curated, verified Pexels photo pools per category (used only as placeholders
+// until a real product photo is uploaded). Chosen to be distinct from Juzubi.
+const PEXELS_BY_CATEGORY: Record<string, number[]> = {
+  sarees: [17113983, 7920194, 14928074, 28316406, 11629757, 37054322, 28943474],
+  lehengas: [33343591, 35637857, 16612743, 28405816, 5192861, 5595710, 37628619],
+  kurtas: [33824984, 29192798, 30196701, 1322993, 33363057, 20382095, 19271174],
+};
+
 const TAG_BY_CATEGORY: Record<string, string> = {
-  sarees: "saree",
-  lehengas: "lehenga",
-  kurtas: "indian,fashion",
   jewellery: "indian,jewellery",
   men: "indian,man,fashion",
+  kids: "indian,kids,fashion",
 };
 
 function slugLock(slug: string): number {
@@ -30,6 +36,11 @@ function isPlaceholder(img: string | null | undefined): boolean {
 }
 
 function themedImage(category: string, slug: string): string {
+  const pool = PEXELS_BY_CATEGORY[category];
+  if (pool && pool.length) {
+    const id = pool[slugLock(slug) % pool.length];
+    return `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=700`;
+  }
   const tag = TAG_BY_CATEGORY[category] ?? "indian,fashion,boutique";
   return `https://loremflickr.com/700/875/${tag}?lock=${slugLock(slug)}`;
 }

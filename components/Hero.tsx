@@ -14,15 +14,15 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   {
-    img: "https://images.pexels.com/photos/7920188/pexels-photo-7920188.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    img: "https://images.pexels.com/photos/7920194/pexels-photo-7920194.jpeg?auto=compress&cs=tinysrgb&w=1920",
     eyebrow: "The Festive Edit",
     title: "Handpicked Indian boutique wear",
-    subtitle: "Sarees, lehengas, kurtas & jewellery — curated, crafted, and just a WhatsApp away.",
+    subtitle: "Sarees, lehengas & suits — curated, crafted, and just a WhatsApp away.",
     ctaHref: "/category/sarees",
     ctaLabel: "Shop Sarees",
   },
   {
-    img: "https://images.pexels.com/photos/28405815/pexels-photo-28405815.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    img: "https://images.pexels.com/photos/33343591/pexels-photo-33343591.jpeg?auto=compress&cs=tinysrgb&w=1920",
     eyebrow: "Wedding Season",
     title: "The Bridal Edit",
     subtitle: "Hand-embroidered lehengas and silks made for the big day.",
@@ -30,7 +30,7 @@ const SLIDES: Slide[] = [
     ctaLabel: "Explore Lehengas",
   },
   {
-    img: "https://images.pexels.com/photos/37628608/pexels-photo-37628608.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    img: "https://images.pexels.com/photos/29192798/pexels-photo-29192798.jpeg?auto=compress&cs=tinysrgb&w=1920",
     eyebrow: "New & Trending",
     title: "Fresh festive styles",
     subtitle: "Anarkalis, kurtas and suits for every occasion.",
@@ -38,15 +38,15 @@ const SLIDES: Slide[] = [
     ctaLabel: "Shop New Arrivals",
   },
   {
-    img: "https://images.pexels.com/photos/6011749/pexels-photo-6011749.jpeg?auto=compress&cs=tinysrgb&w=1920",
-    eyebrow: "Finishing Touches",
-    title: "Jewellery & accessories",
-    subtitle: "Kundan chokers, temple sets, jhumkas and more.",
-    ctaHref: "/category/jewellery",
-    ctaLabel: "Shop Jewellery",
+    img: "https://images.pexels.com/photos/16612743/pexels-photo-16612743.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    eyebrow: "Made to Celebrate",
+    title: "Salwar kameez & suits",
+    subtitle: "Anarkali, straight and A-line suits in chanderi, georgette & silk.",
+    ctaHref: "/category/kurtas",
+    ctaLabel: "Shop Suits",
   },
   {
-    img: "https://images.pexels.com/photos/27719401/pexels-photo-27719401.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    img: "https://images.pexels.com/photos/14928074/pexels-photo-14928074.jpeg?auto=compress&cs=tinysrgb&w=1920",
     eyebrow: "Timeless Drapes",
     title: "Silk & designer sarees",
     subtitle: "Banarasi, Kanjivaram and handloom classics.",
@@ -54,7 +54,7 @@ const SLIDES: Slide[] = [
     ctaLabel: "Shop Sarees",
   },
   {
-    img: "https://images.pexels.com/photos/17001511/pexels-photo-17001511.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    img: "https://images.pexels.com/photos/30196701/pexels-photo-30196701.jpeg?auto=compress&cs=tinysrgb&w=1920",
     eyebrow: "Celebrate in Style",
     title: "Festive & occasion wear",
     subtitle: "Dress beautifully for every celebration.",

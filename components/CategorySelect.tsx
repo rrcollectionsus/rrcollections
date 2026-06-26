@@ -6,8 +6,7 @@ import { CATEGORIES, SUBCATEGORIES, sizesFor } from "@/lib/site";
 // Category options = the live store categories + Men/Kids ribbon sections.
 const CATS: [string, string][] = [
   ...CATEGORIES.map((c) => [c.slug, c.name] as [string, string]),
-  ["men", "Men"],
-  // "kids" temporarily disabled on RRcollections (2026-06-25).
+  // "men" and "kids" temporarily disabled on RRcollections (2026-06-25).
 ];
 
 const chipCls = (on: boolean) =>
