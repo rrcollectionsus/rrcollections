@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RRcollections — South Indian Sarees &amp; Boutique Wear | by Radhika Reddy</title>
+  <meta name="description" content="RRcollections by Radhika Reddy — exquisite South Indian silk sarees and boutique wear. Order on WhatsApp." />
+  <link rel="icon" href="/favicon.png" />
+  <meta property="og:title" content="RRcollections — South Indian Sarees & Boutique Wear" />
+  <meta property="og:description" content="Exquisite South Indian silk sarees & boutique wear. Order on WhatsApp." />
+  <meta property="og:image" content="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b1d3f;
+      --navy-deep: #07142d;
+      --gold: #c2a14d;
+      --gold-bright: #e2c46a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: #fff; background: var(--navy-deep); overflow-x: hidden;
+    }
+    .stage { position: relative; min-height: 100svh; display: flex; flex-direction: column; }
+
+    /* Slideshow */
+    .slides { position: fixed; inset: 0; z-index: 0; }
+    .slide {
+      position: absolute; inset: 0; background-size: cover; background-position: center;
+      opacity: 0; transition: opacity 1.4s ease; transform: scale(1.04);
+      animation: kenburns 12s ease forwards;
+    }
+    .slide.active { opacity: 1; }
+    @keyframes kenburns { from { transform: scale(1.0); } to { transform: scale(1.1); } }
+    .overlay {
+      position: fixed; inset: 0; z-index: 1;
+      background:
+        linear-gradient(to bottom, rgba(7,20,45,0.72), rgba(7,20,45,0.55) 40%, rgba(7,20,45,0.85)),
+        radial-gradient(circle at 50% 35%, rgba(7,20,45,0.25), rgba(7,20,45,0.8));
+    }
+
+    /* Content */
+    .content { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center; padding: 40px 22px; }
+    .logo { width: 132px; height: 132px; border-radius: 50%;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+    .wordmark { font-family: "Playfair Display", Georgia, serif; font-weight: 800;
+      letter-spacing: .5px; margin-top: 22px; line-height: 1;
+      font-size: clamp(38px, 8vw, 72px); }
+    .wordmark .rr { color: var(--gold-bright); }
+    .wordmark .col { color: #fff; }
+    .by { font-family: "Playfair Display", serif; font-style: italic; color: var(--gold);
+      font-size: clamp(16px, 3.4vw, 22px); margin-top: 8px; }
+    .rule { width: 64px; height: 2px; background: var(--gold); margin: 26px auto 0; opacity: .8; }
+    .tagline { max-width: 640px; margin: 22px auto 0; font-size: clamp(15px, 2.6vw, 19px);
+      color: rgba(255,255,255,.92); line-height: 1.6; }
+    .badge { display: inline-block; margin-top: 26px; padding: 7px 16px; border: 1px solid var(--gold);
+      color: var(--gold-bright); border-radius: 999px; font-size: 12px; letter-spacing: 2px;
+      text-transform: uppercase; }
+
+    .cta-row { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .wa {
+      display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+      background: #25D366; color: #07251a; font-weight: 700; font-size: 16px;
+      padding: 15px 26px; border-radius: 999px; box-shadow: 0 8px 26px rgba(37,211,102,.4);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .wa:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(37,211,102,.5); }
+    .wa svg { width: 22px; height: 22px; fill: #07251a; }
+    .call {
+      display: inline-flex; align-items: center; gap: 9px; text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,.5); color: #fff; font-weight: 600; font-size: 15px;
+      padding: 14px 24px; border-radius: 999px; transition: border-color .15s, background .15s;
+    }
+    .call:hover { border-color: var(--gold); background: rgba(255,255,255,.06); }
+
+    /* Footer */
+    .foot { position: relative; z-index: 2; text-align: center; padding: 22px 18px 30px;
+      color: rgba(255,255,255,.75); font-size: 13px; line-height: 1.8; }
+    .foot a { color: var(--gold-bright); text-decoration: none; }
+    .foot a:hover { text-decoration: underline; }
+
+    /* Dots */
+    .dots { position: relative; z-index: 2; display: flex; gap: 8px; justify-content: center; padding-bottom: 6px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.4); transition: all .3s; }
+    .dot.active { width: 22px; border-radius: 6px; background: var(--gold-bright); }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="slides" id="slides"></div>
+    <div class="overlay"></div>
+
+    <main class="content">
+      <img class="logo" src="/logo.png" alt="RRcollections" />
+      <h1 class="wordmark"><span class="rr">RR</span><span class="col">collections</span></h1>
+      <p class="by">by Radhika Reddy</p>
+      <div class="rule"></div>
+      <p class="tagline">Exquisite South Indian silk sarees &amp; handpicked boutique wear.
+        Our online store is launching soon — for now, browse &amp; order directly with us on WhatsApp.</p>
+      <span class="badge">Launching Soon</span>
+
+      <div class="cta-row">
+        <a class="wa" id="waBtn" href="#" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Order on WhatsApp
+        </a>
+        <a class="call" id="callBtn" href="#">Call +1 949 302 8488</a>
+      </div>
+    </main>
+
+    <div class="dots" id="dots"></div>
+    <footer class="foot">
+      <div>WhatsApp / Call: <a id="footPhone" href="#">+1 949 302 8488</a> &nbsp;·&nbsp;
+        <a href="mailto:rrcollectionsus@gmail.com">rrcollectionsus@gmail.com</a></div>
+      <div>Frisco, TX &nbsp;·&nbsp; &copy; <span id="yr"></span> RRcollections — by Radhika Reddy</div>
+    </footer>
+  </div>
+
+  <script>
+    var WA_NUMBER = "19493028488";
+    var WA_TEXT = encodeURIComponent("Hi RRcollections! I'd like to enquire / order your South Indian sarees.");
+    var waLink = "https://wa.me/" + WA_NUMBER + "?text=" + WA_TEXT;
+    document.getElementById("waBtn").href = waLink;
+    document.getElementById("callBtn").href = "tel:+" + WA_NUMBER;
+    document.getElementById("footPhone").href = "tel:+" + WA_NUMBER;
+    document.getElementById("yr").textContent = new Date().getFullYear();
+
+    var IDS = [27575174, 28941551, 30685778, 28943659, 12708653];
+    var px = function (id) {
+      return "https://images.pexels.com/photos/" + id + "/pexels-photo-" + id + ".jpeg?auto=compress&cs=tinysrgb&w=1920";
+    };
+    var slidesEl = document.getElementById("slides");
+    var dotsEl = document.getElementById("dots");
+    IDS.forEach(function (id, i) {
+      var s = document.createElement("div");
+      s.className = "slide" + (i === 0 ? " active" : "");
+      s.style.backgroundImage = "url('" + px(id) + "')";
+      slidesEl.appendChild(s);
+      var d = document.createElement("div");
+      d.className = "dot" + (i === 0 ? " active" : "");
+      dotsEl.appendChild(d);
+    });
+    // Preload
+    IDS.forEach(function (id) { var im = new Image(); im.src = px(id); });
+
+    var slides = slidesEl.children, dots = dotsEl.children, cur = 0;
+    setInterval(function () {
+      slides[cur].classList.remove("active"); dots[cur].classList.remove("active");
+      cur = (cur + 1) % slides.length;
+      slides[cur].classList.add("active"); dots[cur].classList.add("active");
+    }, 5000);
+  </script>
+</body>
+</html>
