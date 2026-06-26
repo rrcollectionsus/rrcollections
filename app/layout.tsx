@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "RRcollections — Indian Boutique | Sarees, Lehengas, Kurtas & Jewellery",
   description:
     "RRcollections by Radhika Reddy is a US-based Indian boutique for handpicked sarees, lehengas, kurtas and jewellery. Browse the collection and order on WhatsApp.",
+  // Pre-launch: keep the full store out of search results. REMOVE this at launch.
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
