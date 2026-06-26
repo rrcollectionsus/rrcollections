@@ -28,6 +28,7 @@ create table if not exists public.products (
 alter table public.products add column if not exists images text[] not null default '{}';
 alter table public.products add column if not exists subcategories text[] not null default '{}';
 alter table public.products add column if not exists sizes text[] not null default '{}';
+alter table public.products add column if not exists weight_oz numeric; -- shipping weight (oz); null = category default
 
 alter table public.products enable row level security;
 drop policy if exists "products public read" on public.products;
