@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Dashboard â€” RRcollections Admin" };
+export const metadata = { title: "Dashboard — RRcollections Admin" };
 
 async function countPublic(table: string): Promise<number | null> {
   try {
@@ -50,9 +50,9 @@ export default async function Dashboard() {
       <p className="mt-1 text-sm text-neutral-500">Manage your RRcollections store.</p>
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <Card label="Products" value={products?.toString() ?? "â€”"} href="/content" hint="Open Content Manager" />
-        <Card label="Enquiries" value={enquiries?.toString() ?? "â€”"} href="/admin/enquiries" hint="WhatsApp orders logged" />
-        <Card label="Subscribers" value={subscribers?.toString() ?? "â€”"} href="/admin/subscribers" hint="Newsletter signups" />
+        <Card label="Products" value={products?.toString() ?? "—"} href="/content" hint="Open Content Manager" />
+        <Card label="Enquiries" value={enquiries?.toString() ?? "—"} href="/admin/enquiries" hint="WhatsApp orders logged" />
+        <Card label="Subscribers" value={subscribers?.toString() ?? "—"} href="/admin/subscribers" hint="Newsletter signups" />
       </div>
 
       {needsKey && (

@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import LogoutButton from "@/components/LogoutButton";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "My Account â€” RRcollections" };
+export const metadata = { title: "My Account — RRcollections" };
 
 export default async function AccountPage() {
   const supabase = await createClient();

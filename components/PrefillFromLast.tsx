@@ -17,7 +17,7 @@ export default function PrefillFromLast() {
       if (cat && lastCat) cat.value = lastCat;
       if (brand && lastBrand && !brand.value.trim()) brand.value = lastBrand;
     } catch {
-      // localStorage unavailable â€” ignore
+      // localStorage unavailable — ignore
     }
 
     function save() {

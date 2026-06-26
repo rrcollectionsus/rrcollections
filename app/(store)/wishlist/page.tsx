@@ -5,7 +5,7 @@ import { getAllProducts } from "@/lib/db";
 import ProductCard from "@/components/ProductCard";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "My List â€” RRcollections" };
+export const metadata = { title: "My List — RRcollections" };
 
 export default async function WishlistPage() {
   const supabase = await createClient();

@@ -27,7 +27,7 @@ export default function SlugFields({
   const [slug, setSlug] = useState(initialSlug);
   const [edited, setEdited] = useState(Boolean(initialSlug));
 
-  // Suggest a name from the uploaded photo's filename â€” but ONLY when the Name
+  // Suggest a name from the uploaded photo's filename — but ONLY when the Name
   // field is still empty, so we never overwrite something you've typed.
   const nameRef = useRef(name);
   nameRef.current = name;
@@ -59,7 +59,7 @@ export default function SlugFields({
         />
       </label>
       <label className="text-sm font-medium text-ink">
-        Slug (web address â€” auto-filled)
+        Slug (web address — auto-filled)
         <input
           name="slug"
           required
@@ -72,7 +72,7 @@ export default function SlugFields({
           className={inputCls}
         />
         <span className="mt-0.5 block text-[11px] font-normal text-neutral-400">
-          Generated from the name â€” you can usually leave this as-is.
+          Generated from the name — you can usually leave this as-is.
         </span>
       </label>
     </>

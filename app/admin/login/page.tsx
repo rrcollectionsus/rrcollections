@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { isAdmin, setAdminCookie } from "@/lib/admin-auth";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Admin sign in â€” RRcollections" };
+export const metadata = { title: "Admin sign in — RRcollections" };
 
 async function login(formData: FormData) {
   "use server";

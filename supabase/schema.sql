@@ -1,5 +1,5 @@
 -- ============================================================
--- RRcollections â€” database schema  (run this in Supabase SQL Editor)
+-- RRcollections — database schema  (run this in Supabase SQL Editor)
 -- Project: rrcollections (separate from TallyMigo)
 -- Covers: products, enquiries/orders, newsletter, customer profiles, wishlists
 -- ============================================================
@@ -111,15 +111,15 @@ insert into public.products (slug, name, brand, category, price, mrp, rating, re
 ('cotton-handloom-saree','Cotton Handloom Saree','Mulmul','sarees',1299,1799,4.3,211,'New','Breathable handloom cotton with a woven temple border. Your everyday-ethnic staple.','https://picsum.photos/seed/rrcollections-saree-4/700/875',4),
 ('bridal-velvet-lehenga','Bridal Velvet Lehenga Set','RRcollections Couture','lehengas',24999,32999,4.8,41,'Bridal','Hand-embroidered velvet lehenga with zardozi work, matching blouse and net dupatta. Made to make the day unforgettable.','https://picsum.photos/seed/rrcollections-lehenga-1/700/875',5),
 ('sequin-party-lehenga','Sequin Party Lehenga','Anaya','lehengas',7999,10999,4.6,64,null,'All-over sequin lehenga with a flared silhouette. The showstopper for sangeet and receptions.','https://picsum.photos/seed/rrcollections-lehenga-2/700/875',6),
-('festive-georgette-lehenga','Festive Georgette Lehenga','Riwaaz','lehengas',5499,null,4.5,88,'Bestseller','Flowy georgette lehenga with thread embroidery â€” festive-ready without the weight.','https://picsum.photos/seed/rrcollections-lehenga-3/700/875',7),
+('festive-georgette-lehenga','Festive Georgette Lehenga','Riwaaz','lehengas',5499,null,4.5,88,'Bestseller','Flowy georgette lehenga with thread embroidery — festive-ready without the weight.','https://picsum.photos/seed/rrcollections-lehenga-3/700/875',7),
 ('anarkali-kurta-set','Anarkali Kurta Set with Dupatta','Mulmul','kurtas',2999,3999,4.6,174,'Bestseller','Floor-length Anarkali with intricate yoke embroidery, churidar and a chiffon dupatta.','https://picsum.photos/seed/rrcollections-kurta-1/700/875',8),
 ('chikankari-cotton-kurta','Chikankari Cotton Kurta','Anaya','kurtas',1499,null,4.5,309,'New','Authentic Lucknowi chikankari hand-embroidery on soft cotton. Cool, classic, everyday luxe.','https://picsum.photos/seed/rrcollections-kurta-2/700/875',9),
 ('printed-straight-kurta','Printed Straight Kurta','RRcollections Everyday','kurtas',899,1299,4.2,421,null,'Easy straight-cut kurta in a contemporary print. A wardrobe workhorse at a friendly price.','https://picsum.photos/seed/rrcollections-kurta-3/700/875',10),
-('silk-kurta-palazzo','Silk Kurta with Palazzo Set','Riwaaz','kurtas',3499,4499,4.7,96,null,'Art-silk kurta paired with flowing palazzos and a dupatta â€” graceful for festive occasions.','https://picsum.photos/seed/rrcollections-kurta-4/700/875',11),
+('silk-kurta-palazzo','Silk Kurta with Palazzo Set','Riwaaz','kurtas',3499,4499,4.7,96,null,'Art-silk kurta paired with flowing palazzos and a dupatta — graceful for festive occasions.','https://picsum.photos/seed/rrcollections-kurta-4/700/875',11),
 ('kundan-choker-set','Kundan Choker Necklace Set','RRcollections Jewels','jewellery',1999,2999,4.6,142,'Bestseller','Statement kundan choker with matching earrings and maang tikka. Bridal-grade sparkle.','https://picsum.photos/seed/rrcollections-jewel-1/700/875',12),
-('oxidised-jhumkas','Oxidised Silver Jhumkas','Anaya','jewellery',499,null,4.4,528,'New','Lightweight oxidised jhumkas with ghungroo drops â€” pair them with kurtas and sarees alike.','https://picsum.photos/seed/rrcollections-jewel-2/700/875',13),
+('oxidised-jhumkas','Oxidised Silver Jhumkas','Anaya','jewellery',499,null,4.4,528,'New','Lightweight oxidised jhumkas with ghungroo drops — pair them with kurtas and sarees alike.','https://picsum.photos/seed/rrcollections-jewel-2/700/875',13),
 ('temple-jewellery-set','Temple Jewellery Necklace Set','Riwaaz','jewellery',2799,3499,4.8,67,null,'South-Indian temple-style necklace and jhumkas in antique gold finish.','https://picsum.photos/seed/rrcollections-jewel-3/700/875',14),
-('embroidered-potli-bag','Embroidered Potli Bag','RRcollections Jewels','jewellery',799,1099,4.3,113,null,'Hand-embroidered potli with bead and zari detailing â€” the finishing touch for festive looks.','https://picsum.photos/seed/rrcollections-jewel-4/700/875',15)
+('embroidered-potli-bag','Embroidered Potli Bag','RRcollections Jewels','jewellery',799,1099,4.3,113,null,'Hand-embroidered potli with bead and zari detailing — the finishing touch for festive looks.','https://picsum.photos/seed/rrcollections-jewel-4/700/875',15)
 on conflict (slug) do update set
   name = excluded.name, brand = excluded.brand, category = excluded.category,
   price = excluded.price, mrp = excluded.mrp, rating = excluded.rating,

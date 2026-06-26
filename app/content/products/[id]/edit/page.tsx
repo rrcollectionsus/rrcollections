@@ -6,7 +6,7 @@ import { updateProduct } from "../../../actions";
 import ProductForm from "@/components/ProductForm";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Edit product â€” RRcollections Content Manager" };
+export const metadata = { title: "Edit product — RRcollections Content Manager" };
 
 export default async function EditProduct({
   params,
@@ -24,7 +24,7 @@ export default async function EditProduct({
 
   return (
     <div className="max-w-5xl">
-      <Link href="/content" className="text-sm text-brand hover:underline">â† Back to catalog</Link>
+      <Link href="/content" className="text-sm text-brand hover:underline">← Back to catalog</Link>
       <h1 className="mt-2 font-display text-2xl font-extrabold text-ink">Edit product</h1>
       <p className="mt-1 text-sm text-neutral-500">{product.name}</p>
       <div className="mt-6">

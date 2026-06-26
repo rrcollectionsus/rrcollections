@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  return { title: `${categoryName(slug)} â€” RRcollections` };
+  return { title: `${categoryName(slug)} — RRcollections` };
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -23,8 +23,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     sale: "Boutique pieces at limited-time prices.",
     new: "Fresh arrivals and trending styles.",
     women: "Everything in women's ethnic wear.",
-    men: "Men's ethnic wear â€” coming soon.",
-    kids: "Kids' ethnic wear â€” coming soon.",
+    men: "Men's ethnic wear — coming soon.",
+    kids: "Kids' ethnic wear — coming soon.",
   };
   const blurb = SPECIAL_BLURBS[slug] ?? CATEGORIES.find((c) => c.slug === slug)?.blurb;
 

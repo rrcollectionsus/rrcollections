@@ -38,7 +38,7 @@ export default function LoginPage() {
           },
         });
         if (error) setErr(error.message);
-        else if (!data.session) setInfo("Almost there â€” check your email to confirm your account, then sign in.");
+        else if (!data.session) setInfo("Almost there — check your email to confirm your account, then sign in.");
         else {
           router.push("/account");
           router.refresh();
@@ -111,7 +111,7 @@ export default function LoginPage() {
           disabled={loading}
           className="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white hover:bg-brand-dark disabled:opacity-60"
         >
-          {loading ? "Please waitâ€¦" : mode === "login" ? "Sign in" : "Create account"}
+          {loading ? "Please wait…" : mode === "login" ? "Sign in" : "Create account"}
         </button>
       </form>
 

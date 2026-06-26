@@ -8,7 +8,7 @@ import ConfirmButton from "@/components/ConfirmButton";
 import { deleteBlob, deleteUnused } from "./actions";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Media â€” RRcollections Content Manager" };
+export const metadata = { title: "Media — RRcollections Content Manager" };
 
 function fmtSize(bytes: number) {
   if (bytes < 1024) return `${bytes} B`;
@@ -41,10 +41,10 @@ export default async function MediaPage() {
         <div>
           <h1 className="font-display text-2xl font-extrabold text-ink">Media library</h1>
           <p className="mt-1 text-sm text-neutral-500">
-            {blobs.length} images Â· {fmtSize(totalBytes)} used Â· {unusedCount} unused
+            {blobs.length} images · {fmtSize(totalBytes)} used · {unusedCount} unused
           </p>
         </div>
-        <Link href="/content" className="text-sm font-medium text-brand hover:underline">â† Back to catalog</Link>
+        <Link href="/content" className="text-sm font-medium text-brand hover:underline">← Back to catalog</Link>
       </div>
 
       <div className="mt-6 rounded-xl border border-neutral-200 bg-white p-5">

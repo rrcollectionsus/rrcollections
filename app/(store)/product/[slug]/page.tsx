@@ -15,8 +15,8 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const product = await getProductBySlug(slug);
-  if (!product) return { title: "Not found â€” RRcollections" };
-  return { title: `${product.name} â€” RRcollections`, description: product.description };
+  if (!product) return { title: "Not found — RRcollections" };
+  return { title: `${product.name} — RRcollections`, description: product.description };
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -70,9 +70,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           />
 
           <ul className="mt-6 space-y-1.5 text-sm text-neutral-600">
-            <li>â€¢ Free shipping on orders over {usd(SITE.freeShipOver)}</li>
-            <li>â€¢ 7-day easy exchange</li>
-            <li>â€¢ Quality-checked & authentic</li>
+            <li>• Free shipping on orders over {usd(SITE.freeShipOver)}</li>
+            <li>• 7-day easy exchange</li>
+            <li>• Quality-checked & authentic</li>
           </ul>
         </div>
       </div>

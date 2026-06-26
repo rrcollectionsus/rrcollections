@@ -108,7 +108,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-neutral-500 sm:flex-row">
-          <p>Â© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
           <p>Made with care for Indian boutique wear.</p>
         </div>
       </div>

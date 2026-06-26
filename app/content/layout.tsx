@@ -21,7 +21,7 @@ export default async function ContentLayout({ children }: { children: ReactNode 
         </div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/" target="_blank" className="text-white/80 hover:text-white">
-            View store â†—
+            View store ↗
           </Link>
           <form action={logoutContent}>
             <button className="rounded-full border border-white/30 px-3 py-1 text-xs font-medium hover:bg-white/10">

@@ -2,7 +2,7 @@ import { requireAdmin } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Subscribers â€” RRcollections Admin" };
+export const metadata = { title: "Subscribers — RRcollections Admin" };
 
 type Sub = { id: string; email: string; created_at: string };
 
@@ -42,7 +42,7 @@ export default async function Subscribers() {
 
       {err ? (
         <div className="mt-6 rounded-md bg-amber-50 px-4 py-3 text-sm text-amber-800">
-          Couldn&apos;t load subscribers â€” this view needs a valid <code>SUPABASE_SERVICE_ROLE_KEY</code> in Vercel. ({err})
+          Couldn&apos;t load subscribers — this view needs a valid <code>SUPABASE_SERVICE_ROLE_KEY</code> in Vercel. ({err})
         </div>
       ) : rows.length === 0 ? (
         <p className="mt-6 text-sm text-neutral-500">No subscribers yet.</p>

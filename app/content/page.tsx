@@ -7,7 +7,7 @@ import ConfirmButton from "@/components/ConfirmButton";
 import SmartImage from "@/components/SmartImage";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Catalog â€” RRcollections Content Manager" };
+export const metadata = { title: "Catalog — RRcollections Content Manager" };
 
 type Row = {
   id: string; slug: string; name: string; brand: string; category: string;
@@ -25,11 +25,11 @@ export default async function ContentCatalog() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="font-display text-2xl font-extrabold text-ink">Product Catalog</h1>
-          <p className="mt-1 text-sm text-neutral-500">{products.length} products Â· changes go live immediately</p>
+          <p className="mt-1 text-sm text-neutral-500">{products.length} products · changes go live immediately</p>
         </div>
         <div className="flex items-center gap-3">
           <Link href="/content/inventory" className="rounded-full border border-brand bg-brand/5 px-5 py-2.5 text-sm font-semibold text-brand hover:bg-brand/10">
-            ðŸ“Š Restock planner
+            📊 Restock planner
           </Link>
           <Link href="/content/media" className="rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-semibold text-ink hover:bg-neutral-100">
             Media library
@@ -63,7 +63,7 @@ export default async function ContentCatalog() {
                     <SmartImage src={p.image} alt={p.name} className="h-12 w-10 shrink-0 rounded object-cover" />
                     <div>
                       <div className="font-medium text-ink">{p.name}</div>
-                      <div className="text-xs text-neutral-500">{p.brand} Â· {p.slug}</div>
+                      <div className="text-xs text-neutral-500">{p.brand} · {p.slug}</div>
                     </div>
                   </div>
                 </td>

@@ -2,7 +2,7 @@ import { requireAdmin } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Enquiries â€” RRcollections Admin" };
+export const metadata = { title: "Enquiries — RRcollections Admin" };
 
 type Enquiry = {
   id: string;
@@ -39,7 +39,7 @@ export default async function Enquiries() {
 
       {err ? (
         <div className="mt-6 rounded-md bg-amber-50 px-4 py-3 text-sm text-amber-800">
-          Couldn&apos;t load enquiries â€” this view needs a valid <code>SUPABASE_SERVICE_ROLE_KEY</code> in Vercel. ({err})
+          Couldn&apos;t load enquiries — this view needs a valid <code>SUPABASE_SERVICE_ROLE_KEY</code> in Vercel. ({err})
         </div>
       ) : rows.length === 0 ? (
         <p className="mt-6 text-sm text-neutral-500">No enquiries yet.</p>
@@ -60,8 +60,8 @@ export default async function Enquiries() {
                   <td className="whitespace-nowrap px-4 py-3 text-neutral-500">
                     {new Date(r.created_at).toLocaleString("en-US")}
                   </td>
-                  <td className="px-4 py-3 font-medium text-ink">{r.product_name ?? "â€”"}</td>
-                  <td className="px-4 py-3 text-neutral-600">{r.message ?? "â€”"}</td>
+                  <td className="px-4 py-3 font-medium text-ink">{r.product_name ?? "—"}</td>
+                  <td className="px-4 py-3 text-neutral-600">{r.message ?? "—"}</td>
                   <td className="px-4 py-3">
                     <span className="rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-medium capitalize text-neutral-700">
                       {r.status}

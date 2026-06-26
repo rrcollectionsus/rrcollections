@@ -5,7 +5,7 @@ import { categoryName, usd } from "@/lib/site";
 import ExportInventoryButton from "@/components/ExportInventoryButton";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Restock Planner â€” RRcollections Content Manager" };
+export const metadata = { title: "Restock Planner — RRcollections Content Manager" };
 
 type Row = {
   id: string;
@@ -71,7 +71,7 @@ export default async function InventoryPage() {
   }
   sugs.sort((a, b) => b.urgency - a.urgency || b.g.sold - a.g.sold);
 
-  // CSV: planning sheet (category Ã— subcategory) + full product list.
+  // CSV: planning sheet (category × subcategory) + full product list.
   const breakdownRows: (string | number)[][] = [];
   for (const [cat, m] of subAgg)
     for (const [sub, g] of m) breakdownRows.push([categoryName(cat), sub, g.available, g.sold, g.total, pct(g)]);
@@ -98,23 +98,23 @@ export default async function InventoryPage() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="font-display text-2xl font-extrabold text-ink">Restock Planner</h1>
-          <p className="mt-1 text-sm text-neutral-500">What&apos;s selling, what&apos;s low, and what to reorder â€” by category.</p>
+          <p className="mt-1 text-sm text-neutral-500">What&apos;s selling, what&apos;s low, and what to reorder — by category.</p>
         </div>
         <div className="flex flex-wrap gap-2">
           <ExportInventoryButton
             headers={["Category", "Subcategory", "Available", "Sold", "Total", "Sell-through %"]}
             rows={breakdownRows}
             filename={`rrcollections-restock-${new Date().toISOString().slice(0, 10)}.csv`}
-            label="â¬‡ Export planning sheet"
+            label="⬇ Export planning sheet"
           />
           <ExportInventoryButton
             headers={["Name", "Category", "Subcategories", "Price (USD)", "MRP (USD)", "Status", "Available Sizes", "Slug"]}
             rows={productRows}
             filename={`rrcollections-products-${new Date().toISOString().slice(0, 10)}.csv`}
-            label="â¬‡ Export product list"
+            label="⬇ Export product list"
           />
           <Link href="/content" className="rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-semibold text-ink hover:bg-neutral-100">
-            â† Catalog
+            ← Catalog
           </Link>
         </div>
       </div>
@@ -128,15 +128,15 @@ export default async function InventoryPage() {
 
       {/* Suggested reorders */}
       <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-5">
-        <h2 className="font-display text-lg font-bold text-ink">ðŸ”´ Suggested reorders</h2>
+        <h2 className="font-display text-lg font-bold text-ink">🔴 Suggested reorders</h2>
         {sugs.length === 0 ? (
-          <p className="mt-2 text-sm text-neutral-600">Your stock looks healthy â€” nothing urgent to reorder.</p>
+          <p className="mt-2 text-sm text-neutral-600">Your stock looks healthy — nothing urgent to reorder.</p>
         ) : (
           <ul className="mt-3 divide-y divide-amber-200/70">
             {sugs.slice(0, 30).map((s, i) => (
               <li key={i} className="flex flex-wrap items-center justify-between gap-2 py-2 text-sm">
                 <span className="font-medium text-ink">
-                  {categoryName(s.category)} <span className="text-neutral-400">â€º</span> {s.sub}
+                  {categoryName(s.category)} <span className="text-neutral-400">›</span> {s.sub}
                 </span>
                 <span className="flex items-center gap-3 text-neutral-600">
                   <span>{s.g.available} left</span>

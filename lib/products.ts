@@ -73,7 +73,7 @@ export const PRODUCTS: Product[] = [
     id: "l3", slug: "festive-georgette-lehenga", name: "Festive Georgette Lehenga",
     brand: "Riwaaz", category: "lehengas", price: 5499,
     rating: 4.5, reviews: 88, badge: "Bestseller",
-    description: "Flowy georgette lehenga with thread embroidery â€” festive-ready without the weight.",
+    description: "Flowy georgette lehenga with thread embroidery — festive-ready without the weight.",
     image: img("rrcollections-lehenga-3"),
   },
 
@@ -103,7 +103,7 @@ export const PRODUCTS: Product[] = [
     id: "k4", slug: "silk-kurta-palazzo", name: "Silk Kurta with Palazzo Set",
     brand: "Riwaaz", category: "kurtas", price: 3499, mrp: 4499,
     rating: 4.7, reviews: 96,
-    description: "Art-silk kurta paired with flowing palazzos and a dupatta â€” graceful for festive occasions.",
+    description: "Art-silk kurta paired with flowing palazzos and a dupatta — graceful for festive occasions.",
     image: img("rrcollections-kurta-4"),
   },
 
@@ -119,7 +119,7 @@ export const PRODUCTS: Product[] = [
     id: "j2", slug: "oxidised-jhumkas", name: "Oxidised Silver Jhumkas",
     brand: "Anaya", category: "jewellery", price: 499,
     rating: 4.4, reviews: 528, badge: "New",
-    description: "Lightweight oxidised jhumkas with ghungroo drops â€” pair them with kurtas and sarees alike.",
+    description: "Lightweight oxidised jhumkas with ghungroo drops — pair them with kurtas and sarees alike.",
     image: img("rrcollections-jewel-2"),
   },
   {
@@ -133,7 +133,7 @@ export const PRODUCTS: Product[] = [
     id: "j4", slug: "embroidered-potli-bag", name: "Embroidered Potli Bag",
     brand: "RRcollections Jewels", category: "jewellery", price: 799, mrp: 1099,
     rating: 4.3, reviews: 113,
-    description: "Hand-embroidered potli with bead and zari detailing â€” the finishing touch for festive looks.",
+    description: "Hand-embroidered potli with bead and zari detailing — the finishing touch for festive looks.",
     image: img("rrcollections-jewel-4"),
   },
 ];

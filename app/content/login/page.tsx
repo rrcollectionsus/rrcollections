@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { isContent, setContentCookie } from "@/lib/content-auth";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Content Manager sign in â€” RRcollections" };
+export const metadata = { title: "Content Manager sign in — RRcollections" };
 
 async function login(formData: FormData) {
   "use server";

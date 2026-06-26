@@ -2,7 +2,7 @@ import Link from "next/link";
 import { searchProductsDb } from "@/lib/db";
 import ProductGrid from "@/components/ProductGrid";
 
-export const metadata = { title: "Search â€” RRcollections" };
+export const metadata = { title: "Search — RRcollections" };
 export const dynamic = "force-dynamic";
 
 export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
@@ -20,7 +20,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
             <span className="text-ink">Search</span>
           </nav>
           <h1 className="font-display text-3xl font-bold text-ink">
-            {query ? <>Results for â€œ{query}â€</> : "Search"}
+            {query ? <>Results for “{query}”</> : "Search"}
           </h1>
           {query && (
             <p className="mt-1 text-sm text-neutral-500">
@@ -36,7 +36,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
         </p>
       ) : results.length === 0 ? (
         <div className="mx-auto max-w-7xl px-4 py-16 text-center">
-          <p className="text-neutral-600">No matches for â€œ{query}â€.</p>
+          <p className="text-neutral-600">No matches for “{query}”.</p>
           <Link href="/" className="mt-4 inline-block rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white hover:bg-brand-dark">
             Back to home
           </Link>

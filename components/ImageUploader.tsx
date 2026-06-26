@@ -3,13 +3,13 @@
 import { useState } from "react";
 import CollageSplitModal from "./ai/CollageSplitModal";
 
-// Build a friendly product name from a filename â€” or "" if it looks like a
+// Build a friendly product name from a filename — or "" if it looks like a
 // camera / auto-generated name (IMG_1234, DSC0001, screenshots, WhatsApp, etc.).
 function nameFromFilename(filename: string): string {
   const base = filename.replace(/\.[a-z0-9]+$/i, "");
   if (/^(img|dsc|dscn|pxl|gopr|photo|image|screenshot|untitled|whatsapp|fb_img|received|signal|video)[-_ ]?\d*$/i.test(base)) return "";
   const cleaned = base.replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim();
-  if (cleaned.replace(/[^a-z]/gi, "").length < 3) return ""; // mostly digits â€” skip
+  if (cleaned.replace(/[^a-z]/gi, "").length < 3) return ""; // mostly digits — skip
   return cleaned.replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
@@ -44,7 +44,7 @@ export default function ImageUploader({ name, initial }: { name: string; initial
         if (d.url) {
           latest = d.url;
           uploaded = true;
-          if (d.wantRemoveBg && !d.bgRemoved) setNote("Background removal didn't run (remove.bg may be out of free credits) â€” image uploaded with its background.");
+          if (d.wantRemoveBg && !d.bgRemoved) setNote("Background removal didn't run (remove.bg may be out of free credits) — image uploaded with its background.");
         } else setErr(d.error || "Upload failed.");
       } catch {
         setErr("Upload failed.");
@@ -92,8 +92,8 @@ export default function ImageUploader({ name, initial }: { name: string; initial
         }}
       >
         <input type="file" accept="image/*" multiple className="hidden" disabled={busy} onChange={(e) => upload(e.target.files)} />
-        <span className="font-medium text-ink">{busy ? "Uploadingâ€¦" : "Upload or take a photo"}</span>
-        <span className="text-xs text-neutral-500">Drag &amp; drop, choose files, or use your camera â€” auto-optimized.</span>
+        <span className="font-medium text-ink">{busy ? "Uploading…" : "Upload or take a photo"}</span>
+        <span className="text-xs text-neutral-500">Drag &amp; drop, choose files, or use your camera — auto-optimized.</span>
       </label>
 
       <label className="mt-2 flex items-center gap-2 text-sm text-ink">
@@ -114,7 +114,7 @@ export default function ImageUploader({ name, initial }: { name: string; initial
           onClick={() => setShowSplit(true)}
           className="rounded-full border border-neutral-300 px-4 py-1.5 text-sm font-medium text-ink hover:bg-neutral-100"
         >
-          âœ‚ï¸ Split a collage
+          ✂️ Split a collage
         </button>
       </div>
 
@@ -122,7 +122,7 @@ export default function ImageUploader({ name, initial }: { name: string; initial
         type="url"
         value={url}
         onChange={(e) => setUrl(e.target.value)}
-        placeholder="â€¦or paste an image URL"
+        placeholder="…or paste an image URL"
         className="mt-2 w-full rounded-md border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-brand"
       />
       {err && <p className="mt-1 text-xs text-sale">{err}</p>}
@@ -140,10 +140,10 @@ export default function ImageUploader({ name, initial }: { name: string; initial
           <div className="max-h-[80vh] w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-5" onClick={(e) => e.stopPropagation()}>
             <div className="mb-3 flex items-center justify-between">
               <h3 className="text-sm font-semibold text-ink">Choose an image</h3>
-              <button type="button" onClick={() => setShowLib(false)} className="text-sm text-neutral-500 hover:text-ink">Close âœ•</button>
+              <button type="button" onClick={() => setShowLib(false)} className="text-sm text-neutral-500 hover:text-ink">Close ✕</button>
             </div>
             {libLoading ? (
-              <p className="py-8 text-center text-sm text-neutral-500">Loadingâ€¦</p>
+              <p className="py-8 text-center text-sm text-neutral-500">Loading…</p>
             ) : lib && lib.length > 0 ? (
               <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
                 {lib.map((u) => (
