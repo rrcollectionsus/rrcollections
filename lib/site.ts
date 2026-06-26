@@ -3,7 +3,7 @@ export const SITE = {
   tagline: "by Radhika Reddy",
   // WhatsApp number — country code first, digits only, no "+" or spaces.
   whatsapp: "19493028488",
-  email: "RRcollections@gmail.com",
+  email: "rrcollectionsus@gmail.com",
   phoneDisplay: "+1 949 302 8488",
   address: "14051 Berryfield, Frisco, TX",
   freeShipOver: 75,
